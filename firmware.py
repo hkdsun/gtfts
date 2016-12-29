@@ -11,6 +11,15 @@ I_LED = 20
 I_UP = 19
 I_DOWN = 5
 
+I_B0 = 4
+I_B1 = 17
+I_B2 = 27
+I_B3 = 22
+I_B4 = 6
+I_B5 = 13
+I_B6 = 26
+I_B7 = 18
+
 def refresh_socket(host, port):
   while True:
     try:
@@ -29,7 +38,6 @@ def idle():
 
 def unidle():
   GPIO.output(I_LED, False)
-  print "hk"
 
 def volume_up(socket):
   socket.sendall("V-")
