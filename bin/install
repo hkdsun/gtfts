@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+if [ -f /usr/bin/volctlsun ]; then
+  rm /usr/bin/volctlsun
+fi
+
+cat >/usr/bin/volctlsun <<EOF
+#!/bin/sh
+python `pwd`/button.py
+EOF
+
+chmod +x /usr/bin/volctlsun
